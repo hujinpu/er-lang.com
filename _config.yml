@@ -10,4 +10,4 @@ permalink:   pretty
 kramdown:
   auto_ids: false
 # END
-exclude: LICENSE, README.markdown, Rakefile, Gemfile
+exclude: LICENSE, README.markdown, Rakefile, Gemfile, nginx.conf
