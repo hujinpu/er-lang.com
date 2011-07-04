@@ -1,0 +1,34 @@
+---
+layout: nil
+title: 404 - Not Found
+desctiption: This blog is where I keep track of stuff that continue to fascinate me. Those include Programming, Design and Life.
+---
+{% include system_head.html %}
+<body class="{{ page.layout }}">
+	<div id="page">
+		{% include header.html %}
+		<div id="main" role="main">
+			<article class="the_article">
+			<div class="article_inner">
+				<div class="content">
+					<header>
+						<h1>{{ page.title }}</h1>
+					</header>
+					<div class="bd">
+						<p>If you need me to write something you'd like to read please request it <a href="http://twitter.com/#!/hujinpu">Twitter @ cssradar</a></p>
+						<h2>Recent Articles</h2>
+						<ul class="recent">
+							{% for post in site.posts limit:10 %}
+							<li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+			</div>
+			</article>
+		</div><!-- id="main" -->
+		{% include footer.html %}
+	</div><!-- id="page" -->
+	{% include system_foot.html %}
+</body>
+</html>

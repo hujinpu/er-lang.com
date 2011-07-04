@@ -1,0 +1,13 @@
+# MUST EDIT BELOW
+sitename: Just write it             #Your site title
+tagline: the question is more important than the answer #You should always have a tagline
+url: http://er-lang.com    #URL Please
+# END
+# CHOOSE YOUR PREFERENCE
+pygments:    true
+markdown:    kramdown
+permalink:   pretty
+kramdown:
+  auto_ids: false
+# END
+exclude: LICENSE, README.markdown, Rakefile, Gemfile

@@ -1,0 +1,37 @@
+---
+layout: home
+title: Just write it
+desctiption: This blog is where I keep track of stuff that continue to fascinate me. Those include Programming, Design and Life.
+---
+{% for post in site.posts limit:1 %}
+<div class="content">
+	<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+	<div class="bd">
+		{{ post.content }}
+	</div>
+</div>
+{% if page.style != 'backnumber' %}
+<footer>
+	<div class="foot_inner">
+	<nav class="pagenation left">
+		<ul>
+			{% if post.previous %}
+			<li class="prev"><a class="internal" rel="prev" href="{{ post.previous.url }}" title="View {{ post.previous.title }}">&laquo; {{ post.previous.title }}</a></li>
+			{% endif %}
+			{% if post.previous and post.next %}
+			<li class="pipe"> | </li>
+			{% endif %}
+			{% if post.next %}
+			<li class="next"><a class="internal" rel="next" href="{{ post.next.url }}" title="View {{ post.next.title }}">{{ post.next.title }} &raquo;</a></li>
+			{% endif %}
+		</ul>
+	</nav>
+	<nav class="archive right">
+		<ul>
+			<li><a href="/backnumber/">Back Number</a></li>
+		</ul>
+	</nav>
+	</div>
+</footer>
+{% endif %}
+{% endfor %}
