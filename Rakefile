@@ -97,7 +97,8 @@ date: #{Time.now.strftime('%Y-%m-%d %k:%M:%S')}
 ---
 EOS
     end
-    puts "Now open #{path} in an editor."
+    # puts "Now open #{path} in an editor."
+    `mate #{path}`
 end
 
 desc "remove files in output directory"
