@@ -1,14 +1,12 @@
----
----
 /* clearfix
 ----------------------------------------------------------------------------------------------------*/
 .clearfix:after,
-.grid:after,
-.hasGrid:after,
-.the_header:after,
+#head:after,
 #main:after,
-#main .article_inner:after,
-.the_footer:after {
+#main .content:after,
+#main .content .bd:after,
+#main .content footer:after,
+#foot:after {
 	clear:both;
 	display:block;
 	visibility:hidden;
@@ -18,39 +16,36 @@
 	font-size:xx-large;
 	content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";}
 .clearfix,
-.grid,
-.hasGrid,
-.the_header,
+#head,
 #main,
-#main .article_inner,
-.the_footer { zoom: 1; } /* IE6-7 */
+#main .content,
+#main .content .bd,
+#main .content footer,
+#foot { zoom: 1; } /* IE6-7 */
 /* typography
 -------------------------------------------------------- */
 body {
-	font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, "MS PGothic", Osaka, Sans-Serif;
-	font-size: 100%;
-	line-height: 1.5; 
+    font-family: 'Tahoma','arial';
+    font-size: 100%;
+    line-height: 1.618;
 }
 /* Headings
 -------------------------------------------------------- */
 h1, h2, h3, h4, h5,h6 {
 	font-weight: bold;
-	text-shadow: 0px 1px 0px #333;
 }
-h1, .h1 { 
-	font-size: 2em;
+h1, .h1 {
+	font-size:2em;
 	line-height: 1.5;
-	margin: 0 0 0.75em;
-	letter-spacing: -2px;
+	margin: 0.75em 0;
 }
 h2, .h2 {
-	font-size: 1.75em;
+	font-size:1.75em;
 	line-height: 1.7143;
 	margin: 0.8571em 0;
-	letter-spacing: -1.5px;
 }
 h3, .h3 {
-	font-size: 1.5em;
+	font-size:1.5em;
 	line-height: 1;
 	margin: 1em 0;
 }
@@ -60,37 +55,20 @@ h4, .h4 {
 	margin: 1.1429em 0;
 }
 h5, .h5 {
-	font-size: 1.1688em;
+	font-size:1.1688em;
 	font-size: 1.125em;
 	line-height: 1.3333;
 	margin: 1.3333em 0;
 }
 h6, .h6 {
-	font-size: 1em;
+	font-size:1em;
 	line-height: 1.5;
 	margin: 1.5em 0;
 }
-/* LINK
--------------------------------------------------------- */
-a:link {
-	color: #1a1a1a;
-	text-decoration: none;
-}
-a:visited {
-	color: #383838;
-	text-decoration: none;
-}
-a:hover {
-	color: #555555;
-	text-decoration: none;
-}
+.small { font-size: 0.85em; }
 /* P UL OL DL, IMG
 -------------------------------------------------------- */
-p, ul, ol, dl, img {
-	font-size: 1.0625em;
-	line-height: 1.4118;
-	margin: 0 0 1.4118em 0;
-}
+p, ul, ol, dl, img { margin: 0 0 1.5em 0; }
 /* ALL THE TRIMMINGS
 -------------------------------------------------------- */
 blockquote {
@@ -108,3 +86,4 @@ em { font-weight: bold; }
 	font-weight: normal;
 	line-height: inherit;
 }
+

@@ -26,8 +26,14 @@ task :generate_style do
   system "juicer merge --force _site/stylesheet/master.css"
 end
 
+desc "Generate js only"
+task :generate_js do
+  puts ">>> Generating js <<<"
+  system "juicer merge -i --force _site/js/master.js"
+end
+
 desc "generate website in output directory"
-task :generate => [:clean, :generate_site, :generate_style] do
+task :generate => [:clean, :generate_site, :generate_style, :generate_js] do
   puts "Site Generating Complete!\n\nRefresh your browser"
 end
 
