@@ -23,6 +23,7 @@ end
 desc "Generate styles only"
 task :generate_style do
   puts ">>> Generating styles <<<"
+  system "lessc _site/stylesheet/style.less _site/stylesheet/style.css"
   system "juicer merge --force _site/stylesheet/master.css"
 end
 
@@ -79,12 +80,6 @@ task :stop_serve do
     print "Stoping serve..."
     ok_failed system("kill -9 #{pid}")
   end
-end
-
-## DEPLOY
-desc "Deploy Amazon s3 Using s3Sync"
-task :deploy do
-  system('s3sync -rpv _site/ er-lang.com:')
 end
 
 ## MISC
